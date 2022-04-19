@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root{
+            --main-color: rgba(33, 4, 255);
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', arial, sans-serif;
+        }
+        /* ----START--------------------------------------------------------------------- */
+        div.start{
+           background-image: url(img/concert-2527495.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+           height: 100vh;
+           position: relative;
+           background: linear-gradient( rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2) ),url(img/concert-2527495.jpg) no-repeat;
+        }
+        div.start > div.text{
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             text-align: center;
+        }
+        div.start > div.text > h1 {
+            text-transform: uppercase;
+             font-size: 40px;
+            color: var(--main-color);
+            margin-bottom: 10px;
+        }
+
+        div.start > div.text > p {
+          letter-spacing: 1px;
+          font-weight: 500;
+        }
+      
+
+        /* ----EVENTS-------------------------------------------------------------------- */
+        
+         div.events > h2 {
+             text-align: center;
+             margin: 60px;
+             color: var(--main-color);
+             letter-spacing: 2px;
+         }
+
+         div.images{
+             display: grid;
+             row-gap: 30px;
+             grid-template-columns: 80vw;
+             margin: 15px 20px 20px 20px;
+             grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh;
+             justify-content: center;
+             align-items: center;
+         }
+
+         div.images > div {
+             background-repeat: no-repeat;
+             background-size: 100%;
+             transition: 1s;
+         }
+
+         div.images > div:hover {
+            background-size: 120%;
+         }
+
+         div.images > div:nth-of-type(1) {
+             background-image: url(img/event1.jpg);
+         }
+
+         div.images > div:nth-of-type(2) {
+             background-image: url(img/event2.jpg);
+         }
+
+         div.images > div:nth-of-type(3) {
+             background-image: url(img/event3.jpg);
+         }
+
+         div.images > div:nth-of-type(4) {
+             background-image: url(img/event4.jpg);
+         }
+
+         div.images > div:nth-of-type(5) {
+             background-image: url(img/event5.jpg);
+         }
+
+         div.images > div:nth-of-type(6) {
+             background-image: url(img/event6.jpg);
+         }
+         
+         div.images > div > p{
+             display: flex;
+             justify-content: center;
+             line-height: 30vh;
+             height:  30vh;
+             letter-spacing: 1px;
+             font-weight: 500;
+             font-size: 1.2rem;
+             background-color: rgba( 0, 0, 0, .3 );
+         }
+
+        /* ----OPINIONS------------------------------------------------------------------------------------ */
+      
+        div.opinions > h2 {
+          margin: 40px 0 15px 0;
+          text-align: center;
+          color: var(--main-color);
+        }
+
+        div.opinions > h2 ~ p{
+            text-align: center;
+            padding: 0 20px 5px 20px;
+            letter-spacing: 2px;
+        }
+
+        div.opinions > div.grid{
+            display: grid;
+            row-gap: 30px;
+            margin: 30px;
+            justify-content: center;
+            align-items: center;
+         }
+        
+
+        div.grid > div {
+            background-color: #111;
+            padding: 25px;  
+            transition: 1s;
+        }
+
+        div.grid > div:hover{
+            background-color:var(--main-color);
+        }
+        div.grid > div:hover p ~p {
+            color: #000;
+        }
+
+        div.grid > div > p {
+            text-align: center;
+        }
+
+        div.grid > div > p ~ p{
+            margin-top: 20px;
+            color: var(--main-color);
+            transition: 1s;
+        }
+      
+        /* ----FORM---------------------------------------------------------------------------------------- */
+
+        div.form>h2 {
+            padding: 20px 40px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        div.form>p {
+            padding: 20px 40px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        div.form>h2 {
+            color: var(--main-color);
+        }
+
+        div.form>form {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto 60px auto;
+        }
+
+        div.form>form>input {
+
+            width: 80vw;
+            height: 50px;
+            border: 2px solid #fff;
+            background-color: rgba(11, 11, 11, 0.5);
+            margin: 7px;
+            padding: 10px;
+            color:#fff;
+        }
+
+        form > textarea{
+            width: 80vw;
+            height: 200px;
+            border: 2px solid #fff;
+            background-color: rgba(11, 11, 11, 0.5);
+            margin: 7px;
+            padding: 10px;
+            color:#fff;
+        }
+
+        form > button{
+            background-color: var(--main-color);
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+        }
+
+        form > button:hover{
+           opacity: 0.8;
+        }
+
+        
+        
+
+        /* ----FOOTER--------------------------------------------------------------------------------------- */
+        footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: var(--main-color);
+            padding: 50px 25px;
+        }
+
+        footer>div {
+            padding: 40px 15px;
+            display: flex;
+        }
+
+        footer>div.socials {
+            flex-direction: column;
+        }
+
+        footer>div.socials>div.icons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer>div.contact {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer>div.socials>h3 {
+            margin: auto auto 15px auto;
+        }
+
+        footer div.contact>h3 {
+            margin: auto auto 15px auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            padding: 5px;
+        }
+
+        div.socials>div.icons>a>i {
+            font-size: 35px;
+        }
+
+        div.contact>a>i {
+            font-size: 18px;
+            margin-left: 15px;
+        }
+
+        @media(min-width: 500px) {
+
+            footer>div.socials>div.icons {
+            justify-content:center;
+        }
+        }
+
+        @media (min-width: 1024px) {
+             div.images {
+             column-gap: 30px;
+             grid-template-columns:  30vw 30vw 30vw;
+             grid-template-rows: 30vh 30vh;
+          }
+          div.opinions > div.grid{
+            row-gap: 40px;
+            column-gap: 40px;
+            grid-template-columns:  30vw 30vw;
+            grid-template-rows: 30vh 30vh;
+          }
+
+          footer{
+           flex-direction: row;
+           gap: 20vw;
+     
+          }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav></nav>
+
+    <div class="start"> 
+        <div class="text">
+        <h1>Razem stworzymy wyjątkowe</h1>
+        <p>emocje i doświadczenia uczestników</p>
+        </div>
+    </div>
+    <div class="events">
+     <h2>Imprezy i eventy firmowe</h2>
+     <div class="images">
+     <div><p>Eventy biznesowe</p></div>
+     <div><p>Integracja firmowa</p></div>
+     <div><p>Eventy online</p></div>
+     <div><p>Platforma do transmisji</p></div>
+     <div><p>Eventy hybrydowe</p></div>
+     <div><p>Eventy promocyjne</p></div>
+    </div>
+
+
+    </div>
+    <div class="opinions">
+        <h2>Opinie</h2>
+        <p>Zadowolonych Klientów, którzy współpracowali z nami pierwszy raz!</p>
+        <div class="grid">
+        <div><p>Doprecyzowanie oczekiwań klienta i rozwiązania techniczne zastosowane w danej sytuacji, to podejście zdradzające znajomość branzy i wyobraźnię - niezbędną w tej materii.</p> <p>Centrum Historii Zajezdnia</p></div>
+        <div><p>Mając już wieloletnie doświadczenie we współpracy z agencjami eventowymi, z pełnym przekonaniem  polecamy firmę Wytwórnia Wydarzeń, jako wiarygodną i profesjonalną firmę.</p><p>Seppeler Gruppe</p></div>
+        <div><p>Dzięki szybkiemu i racjonalnemu reagowaniu na nieprzewidywane sytuacje skomplikowane logistycznie przedsięwzięcie przebiegło w sposób kontrolowany i w bardzo miłej atmosferze.</p><p>Antalis Poland Sp. z o.o.</p></div>
+        <div><p>Wysoko oceniamy jakość, profesjonalizm i organizację zadania. Mamy przyjemność zarekomendowania Wytwórni Wydarzeń jako partnera godnego polecenia w organizowaniu imprez.</p><p>INTIVE S.A.</p></div>
+        </div>
+    </div>
+    <div class="form">
+        <h2>Porozmawiajmy o Twoim evencie!</h2>
+        <p>Chcesz kreować swoją biznesową przyszłość? Zrobimy z tego prawdziwe wydarzenie! <br>
+            Opowiedz nam krótko, czego potrzebujesz. Doradzimy Ci najlepsze rozwiązania.</p>
+        <form>
+            <input type="text" placeholder="Imię i nazwisko" >
+            <input type="text" placeholder="E-mail">
+            <input type="text" placeholder="Telefon">
+            <input type="text" list="events" placeholder="Wybierz rodzaj wydarzenia z listy">
+            <datalist id="events">
+                <option value="Eventy biznesowe">
+                <option value="Integracja firmowa">
+                <option value="Digital event">
+                <option value="Team-building online"></option>
+                <option value="Eventy hybrydowe"></option>
+                <option value="Eventy promocyjne 360°"></option>
+            </datalist>
+            <textarea type="text"placeholder="Treść wiadomości..."></textarea>
+            <button>WYŚLIJ</button>
+    </div>
+    <footer>
+        <div class="socials">
+            <h3>Obserwuj nas</h3>
+            <div class="icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="icon-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-squared"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="icon-youtube-squared"></i></a>
+                <a href="https://twitter.com/?lang=pl" target="_blank"><i class="icon-twitter-squared"></i></a>
+            </div>
+        </div>
+
+
+        <div class="contact">
+            <h3>Kontakt </h3>
+            <a href="tel://+48000000000"> <i class="icon-phone"></i> +48 000 000 000</a>
+            <a href="mailto:biuro@wytworniawydarzen.com"> <i class="icon-mail-alt"></i> biuro@wytworniawydarzen.com
+            </a>
+            <a href="https://www.google.com/maps/place/Wo%C5%82oska+12,+02-675+Warszawa/@52.1795193,21.0020112,17z/data=!3m1!4b1!4m5!3m4!1s0x471932d891e2cd01:0x85611876ed05c238!8m2!3d52.1795193!4d21.0041999"
+                target="_blank"> <i class="icon-location"></i> Wołoska 12, 02-675 Warszawa </a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
